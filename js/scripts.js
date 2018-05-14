@@ -4,12 +4,15 @@ var url = 'https://api.icndb.com/jokes/random';
 // button.addEventListener('click', function(){
 //   getJoke();
 // });
-var button = $('#get-joke').click(function() {
+
+var $button = $('#get-joke').click(function() {
   getJoke();
-})
+});
+
 
 // var paragraph = document.getElementById('joke');
-var paragraph = $('#jake');
+
+var $paragraph = $('#joke');
 
 // function getJoke() {
 //   var object = new XMLHttpRequest();
@@ -20,8 +23,9 @@ var paragraph = $('#jake');
 //   });
 //   object.send();
 // }
+
 function getJoke() {
-  $ajax({
+  $.ajax({
     method:'GET',
     url: url,
     success: function(response) {
